@@ -85,12 +85,18 @@ Mental Health/
 │   ├── __init__.py
 │   ├── config.py              # Configuration constants & crisis hotlines
 │   ├── safety.py              # High-risk evaluation & safety protocol
-│   ├── rag_pipeline.py        # Chunking, vector embedding & FAISS search
-│   ├── llm_chain.py           # Prompting, memory & Pydantic output parser
+│   ├── rag_pipeline.py        # Chunking, TF-IDF / Embedding search
+│   ├── llm_chain.py           # Prompting, memory & Intent-Aware logic
+│   ├── database.py            # SQLite User Authentication & Chat History
 │   └── mood_tracker.py        # Mood tracking & journal logging
-├── mindcare_ai_companion.ipynb# Comprehensive Jupyter Notebook with sequential cells
+├── docs/                      # Documentation & Jupyter Notebooks
+│   └── mindcare_ai_companion.ipynb
+├── tests/                     # Automated Test Suite
+│   ├── test_auth.py           # Authentication & User persistence tests
+│   ├── test_pipeline.py      # End-to-end RAG & Intent detector tests
+│   └── test_repeating_fix.py  # Response repetition fix verification
 ├── app.py                     # Streamlit frontend UI
-├── api.py                     # FastAPI REST server endpoint
+├── api.py                     # FastAPI REST server with Auth & Persistence
 ├── requirements.txt           # Dependency file
 └── README.md                  # Project documentation
 ```

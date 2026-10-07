@@ -3,10 +3,11 @@ import os
 import json
 
 # Add project root to sys.path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_ROOT)
 
 # Remove old test database if present
-db_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mindcare.db")
+db_file = os.path.join(PROJECT_ROOT, "mindcare.db")
 if os.path.exists(db_file):
     os.remove(db_file)
 

@@ -1,4 +1,10 @@
+import sys
+import os
 import json
+
+# Add project root to sys.path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from src.safety import SafetyChecker
 from src.rag_pipeline import MentalHealthRAG
 from src.llm_chain import MindCareAssistant, IntentDetector
